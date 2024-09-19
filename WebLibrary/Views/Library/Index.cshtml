@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BookDTO>
+
+<h1>All Books</h1>
+
+<p>
+    <a asp-action="CreateBook" class="btn btn-outline-primary"><i class="fa fa-plus">Create new Book</i></a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.BookID)</th>
+            <th>@Html.DisplayNameFor(model => model.Title)</th>
+            <th>@Html.DisplayNameFor(model => model.Author)</th>
+            <th>@Html.DisplayNameFor(model => model.Genre)</th>
+            <th>@Html.DisplayNameFor(model => model.IsAvailable)</th>
+            <th>@Html.DisplayNameFor(model => model.PublicationYear)</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.BookID)</td>
+                <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                <td>@Html.DisplayFor(modelItem => item.Author)</td>
+                <td>@Html.DisplayFor(modelItem => item.Genre)</td>
+                <td>@Html.DisplayFor(modelItem => item.IsAvailable)</td>
+                <td>@Html.DisplayFor(modelItem => item.PublicationYear)</td>
+
+                <td>
+                    <a asp-action="Details" class="btn btn-success" asp-route-id="@item.BookID">Details<i class="fade fa-edit"></i></a>
+
+                    <a asp-action="UpdateBook" class="btn btn-warning" asp-route-bookId="@item.BookID">Edit<i class="fa fa-edit"></i></a>
+
+                    <a asp-action="DeleteBook" class="btn btn-danger" asp-route-bookId="@item.BookID">Delete<i class="fa fa-trash"></i></a>
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

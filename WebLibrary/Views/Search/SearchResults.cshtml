@@ -1,0 +1,35 @@
+﻿@model IEnumerable<BookDTO>
+
+<h1>Search Results</h1>
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publication Year</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model == null || !Model.Any())
+        {
+            <tr>
+                <td colspan="4">No books found.</td>
+            </tr>
+        }
+        else
+        {
+            foreach (var book in Model)
+            {
+                <tr>
+                    <td>@book.Title</td>
+                    <td>@book.Author</td>
+                    <td>@book.PublicationYear</td>
+                    <td>@book.Genre</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
