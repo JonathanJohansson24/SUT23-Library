@@ -1,0 +1,72 @@
+.book-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.book-card:nth-child(odd) {
+  background-color: #e3f2fd;
+}
+
+.book-card:nth-child(even) {
+  background-color: #fce4ec;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  background-color: #f1f1f1;
+}
+
+.book-card h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+.book-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.details-button {
+  display: block;
+  padding: 5px 10px; /* Reduce padding to take less space */
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 12px;
+  margin: 20px auto 0; /* Center the button horizontally and add margin at the top */
+  transition: background-color 0.2s;
+  text-align: center;
+  width: fit-content; /* Ensure the button width fits its content */
+}
+
+.details-button:hover {
+  background-color: #0056b3;
+}
+
+.availability-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+}
+
+.available {
+  background-color: green;
+}
+
+.not-available {
+  background-color: red;
+}

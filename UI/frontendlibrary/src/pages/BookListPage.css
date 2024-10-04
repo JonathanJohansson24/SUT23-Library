@@ -1,0 +1,94 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2d2d2d; /* Darker background */
+    color: #f0e6d2; /* Lighter text */
+  }
+  
+  .book-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .sort-container {
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .sort-container label {
+    font-size: 18px; /* Increase font size to match the dropdown */
+    font-weight: bold;
+    color: #f0e6d2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    padding: 10px 15px; /* Add padding to match the dropdown */
+  }
+  
+  .sort-container label:hover {
+    color: #f28b20;
+  }
+  
+  .sort-container select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #2d2d2d;
+    color: #f0e6d2;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sort-container select:focus {
+    border-color: #f28b20;
+    box-shadow: 0 0 10px rgba(242, 139, 32, 0.5);
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    background-color: #2d2d2d;
+    color: #f0e6d2;
+    border: 1px solid #f0e6d2;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .pagination button.active {
+    background-color: #f28b20;
+    color: #2d2d2d;
+  }
+  
+  .pagination button:hover {
+    background-color: #f28b20;
+    color: #2d2d2d;
+    transform: translateY(-2px);
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #f0e6d2;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+  }
+  
+  h2:hover {
+    color: #f28b20;
+  }
